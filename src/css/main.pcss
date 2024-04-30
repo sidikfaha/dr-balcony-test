@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply py-1 px-3 border rounded-lg text-[#878787];
+  @apply hover:text-primary hover:border-primary;
+  @apply transition-colors duration-200;
+  @apply flex gap-2 items-center;
+}
+
+.header-ul {
+  @apply flex flex-wrap text-[#878787];
+
+  & > li {
+    @apply flex items-center;
+
+    & > svg {
+      @apply w-4 h-4 mr-1;
+    }
+
+    & span {
+      @apply text-gray-800;
+    }
+
+    & a {
+      @apply text-blue-600;
+    }
+
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        @apply mx-4;
+        @apply self-stretch border-r border-gray-300;
+      }
+    }
+  }
+}
+
+.tab {
+  @apply px-4 py-2 border-b text-gray-400;
+
+  &.active,
+  &:hover {
+    @apply text-primary border-primary;
+  }
+}
+
+ul.stepper {
+  @apply grid grid-cols-7 text-center text-gray-500;
+
+  li {
+    @apply flex flex-col items-stretch relative text-sm;
+
+    & > div {
+      @apply flex gap-1 items-center;
+
+      & > span {
+        @apply w-10 h-10 flex items-center justify-center rounded-full bg-[#E2E2E2];
+      }
+
+      & > hr {
+        @apply flex-1 border-t border-4 border-[#E2E2E2];
+
+        &:first-child {
+          @apply rounded-r-full;
+        }
+
+        &:last-child {
+          @apply rounded-l-full;
+        }
+      }
+    }
+
+    &.active {
+      & > div > span {
+        @apply bg-black text-white;
+      }
+
+      & > div > hr {
+        @apply border-primary;
+      }
+    }
+  }
+}
+
+.img-card {
+    &:hover {
+        & > button {
+            @apply flex;
+        }
+    }
+}
+
+.side-menu {
+    @apply px-4 mt-20 flex flex-col items-stretch w-full gap-2;
+
+    & > li > a {
+        @apply flex justify-between p-2 rounded-lg;
+
+        &.active, &:hover {
+            @apply bg-primagy-ghost text-primary;
+        }
+
+        & > div {
+            @apply flex gap-2 flex-1;
+        }
+    }
+}
