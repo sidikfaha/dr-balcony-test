@@ -1,6 +1,6 @@
 # Design implementation test
 
-Tu run the project, run the followed commands :
+To run the project, run the following commands :
 
 ```bash
 # install dependencies
